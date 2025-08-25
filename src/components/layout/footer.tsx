@@ -15,7 +15,7 @@ export function Footer() {
               <span className="font-bold text-lg">Ultimate Pokédex</span>
             </div>
             <p className="text-muted-foreground text-sm max-w-md">
-              A modern, fast, and beautiful Pokédex application built with Next.js. 
+              A modern, fast, and beautiful Pokédex application. 
               Discover, explore, and compare your favorite Pokémon with powerful features.
             </p>
           </div>
@@ -63,15 +63,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://github.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
-                >
-                  <Github className="h-3 w-3" />
-                  Source Code
-                </a>
+       
               </li>
               <li>
                 <span className="text-muted-foreground inline-flex items-center gap-1">
@@ -89,7 +81,7 @@ export function Footer() {
               © {new Date().getFullYear()} Ultimate Pokédex. Built for Pokémon fans worldwide.
             </p>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>Powered by Next.js</span>
+              <span>Kraeg Avila</span>
               <span>•</span>
               <span>Data from PokeAPI</span>
             </div>

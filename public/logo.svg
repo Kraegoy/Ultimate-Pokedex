@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" role="img" aria-labelledby="title desc">
+  <desc id="desc">A modern Poké Ball emblem with a gradient accent and the words Ultimate Pokédex.</desc>
+
+  <!--
+    Theme:
+    - Change --accent / --accent-2 to recolor the logo.
+    - Optional classes for type theming are included below.
+  -->
+  <style>
+    :root { --accent: #ef4444; --accent-2: #f59e0b; --ink: #0f172a; --ink-2:#334155; }
+    svg { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", sans-serif; }
+
+    /* Optional: drop-in type classes for quick theming */
+    .type-fire    { --accent:#EE8130; --accent-2:#F6AD55; }
+    .type-water   { --accent:#6390F0; --accent-2:#60A5FA; }
+    .type-grass   { --accent:#7AC74C; --accent-2:#A7F3D0; }
+    .type-electric{ --accent:#F7D02C; --accent-2:#FBBF24; }
+    .type-psychic { --accent:#F95587; --accent-2:#FB7185; }
+    .type-dragon  { --accent:#6F35FC; --accent-2:#A78BFA; }
+    .type-dark    { --accent:#705746; --accent-2:#9CA3AF; }
+    .type-fairy   { --accent:#D685AD; --accent-2:#F472B6; }
+    .type-steel   { --accent:#B7B7CE; --accent-2:#CBD5E1; }
+
+    .wordmark { letter-spacing: 0.5px; }
+    .title    { font-weight: 800; font-size: 44px; }
+    .subtitle { font-weight: 700; font-size: 44px; }
+  </style>
+
+  <defs>
+    <!-- Accent gradient for icon and text -->
+    <linearGradient id="g-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="var(--accent)" />
+      <stop offset="100%" stop-color="var(--accent-2)" />
+    </linearGradient>
+
+    <!-- Soft shadow for emblem -->
+    <filter id="f-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Emblem -->
+  <g transform="translate(24,24)" filter="url(#f-shadow)">
+    <!-- Outer ring -->
+    <circle cx="76" cy="76" r="70" fill="#ffffff"/>
+    <circle cx="76" cy="76" r="70" fill="none" stroke="#0f172a" stroke-width="6"/>
+
+    <!-- Top half -->
+    <path d="M76,6
+             a70,70 0 0 1 70,70
+             H6
+             a70,70 0 0 1 70,-70 Z"
+          fill="url(#g-accent)"/>
+
+    <!-- Center band -->
+    <rect x="14" y="70" width="124" height="12" rx="6" fill="#0f172a"/>
+
+    <!-- Center button -->
+    <circle cx="76" cy="76" r="22" fill="#ffffff" stroke="#0f172a" stroke-width="6"/>
+    <circle cx="76" cy="76" r="12" fill="url(#g-accent)"/>
+
+    <!-- Subtle highlight -->
+    <ellipse cx="60" cy="44" rx="20" ry="10" fill="#ffffff" opacity="0.25"/>
+  </g>
+
+  <!-- Text -->
+  <g class="wordmark">
+    <text x="200" y="85" class="title" fill="var(--ink)">Ultimate</text>
+    <text x="200" y="135" class="subtitle" fill="var(--ink-2)">Pokédex</text>
+  </g>
+</svg>

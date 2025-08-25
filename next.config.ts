@@ -9,7 +9,18 @@ const nextConfig: NextConfig = {
   },
   turbopack: {},
   images: {
-    domains: ['raw.githubusercontent.com', 'assets.pokemon.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        pathname: '/PokeAPI/sprites/**',
+      },
+      {
+        protocol: 'https', 
+        hostname: 'assets.pokemon.com',
+        pathname: '/**',
+      },
+    ],
   },
 };
 
